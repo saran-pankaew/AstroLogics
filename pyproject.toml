@@ -9,7 +9,8 @@ dependencies = [
     "scikit-learn",
     "maboss", 
     "boolsim", 
-    "mpbn"
+    "mpbn",
+    "seaborn"
 ]
 authors = [
   {name = "Saran Pankaew", email = "saran.pankeaw@curie.fr"},
