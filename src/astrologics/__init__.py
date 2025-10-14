@@ -1,19 +1,19 @@
 """
-{Test script for the Boolean Benchmark project}
+AstroLogics : A Python package for analyzing monotonous Boolean model ensembles.
 """
 __author__ = 'Saran PANKAEW'
-__version__ = '0.4'
+__version__ = '0.5'
 __maintainer__ = 'Saran PANKAEW'
 __email__ = 'saran.pankeaw@curie.fr'
 __status__ = 'development'
-__date__ = '05/08/2025'
+__date__ = '14/10/2025'
 
 from .model_attractors import attractors
 from .model_simulation import simulation
 from .trajectory_clustering import trajectory
 from .logical_rules_processing import logic
 
-class LogicEnsemble:
+class ensemble:
     def __init__(self, path, project_name):
         self.path = path
         self.project = project_name
@@ -44,7 +44,7 @@ class LogicEnsemble:
     #    print('Succession diagram object created')
     
     def __repr__(self):
-        print(f'LogicEnsemble object for the project {self.project}')
+        print(f'AstroLogics object for the project {self.project}')
         print(f'Path: {self.path}')
         print(f'Simulation object: {self.simulation}')
 
