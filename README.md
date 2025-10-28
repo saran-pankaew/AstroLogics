@@ -1,3 +1,9 @@
+# Dear all
+
+I'm moving this codebase to (https://github.com/sysbio-curie/AstroLogics.git).
+This repo will no longer be updated. All further update to AstroLogics will be on the `sysbio-curie` 
+
+
 <img align="left" width="160" src="./doc/images/Logo_full.svg" />
 
 # An analysis framework for monotonous Boolean model ensemble
