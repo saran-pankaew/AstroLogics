@@ -26,22 +26,8 @@ def bonesis_ensemble_from_sif(file,
     Returns:
         list[mpbn.MPBooleanNetwork]: Generated Boolean network ensemble.
     """
-    # Convert SIF to InfluenceGraph
-    edges = []
-    with open(file, "r", encoding="utf-8") as fh:
-        for raw in fh:
-            line = raw.strip()
-            if not line:
-                continue
-            parts = [part.strip() for part in re.split(r'\s+', line) if part.strip()]
-            if len(parts) != 3:
-                continue
-            src, interaction, tgt = parts
-            sign = 1 if interaction in ["->", "1", "activates"] else -1
-            edges.append((src, tgt, dict(sign=sign)))
-    dom = bonesis.InfluenceGraph(edges, exact=exact_influence_graph)
-    data = {}
-    bo = bonesis.BoNesis(dom, data)
+    dom = bonesis.InfluenceGraph.from_sif(file, exact=exact_influence_graph)
+    bo = bonesis.BoNesis(dom)
 
     # Add `extra` properties
     extra_properties(bo)
